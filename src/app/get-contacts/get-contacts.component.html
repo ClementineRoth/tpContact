@@ -1,0 +1,22 @@
+<table>
+    <tr>
+        <th>id</th>
+        <th>mail</th>
+        <th>nom</th>
+        <th>prenom</th>
+        <th>age</th>
+        <th>adresse</th>
+        <th>telephone</th>
+        <th></th>
+    </tr>
+    <tr *ngFor="let cont of MyList">
+        <td>{{cont.id}}</td>
+        <td>{{cont.mail}}</td>
+        <td>{{cont.nom}}</td>
+        <td>{{cont.prenom}}</td>
+        <td>{{cont.age}}</td>
+        <td>{{cont.adresse}}</td>
+        <td>{{cont.telephone}}</td>
+        <td><button (click)="delete(cont.id)">delete</button></td>
+    </tr>
+</table>

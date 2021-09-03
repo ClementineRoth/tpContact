@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Ecommerce';
+  
+  show = false;
+
+  deconnexion(){
+    sessionStorage.clear();
+  }
+  ngDoCheck(){
+    this.show = (sessionStorage.getItem("contact")!=undefined)?true:false;
+  }
 }
